@@ -1,0 +1,11 @@
+<div>
+  <div class="ui icon input" id="parentContainer" [class.loading]="isLoading" style="margin: 5px 0px !important;">
+    <input type="text" placeholder="Search..."  (keyup)="searchTextOnKeyupEvent()" >
+    <i class="search icon"></i>
+  </div>
+  <div class="menu-container" [@menuVisibleAnimation]="menuVisible">
+      <div style="height: 40px;">
+
+      </div>
+  </div>
+</div>

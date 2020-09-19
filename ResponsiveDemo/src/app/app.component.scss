@@ -1,0 +1,62 @@
+.sticky{
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+
+.flex-fill
+{
+  flex:1 !important;
+  overflow: auto;
+}
+.item::before
+{
+     width: 0px !important;
+}
+
+.item::after
+{
+   width: 0px !important;
+}
+
+.active.item, .ui.blue
+{
+    background-color: #248EC0 !important;
+}
+
+
+
+.inline-textField-outlined
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.inline-textField
+{
+      display: inline-flex !important;
+      border: none !important;
+
+}
+.inline-textfield-label
+{
+    display: inline-flex !important;
+    background-color: transparent;
+    transform: translateY(-52px);
+}
+
+.inline-textfield-leading
+{
+  display: block;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-left: 1px solid;
+  border-right: none;
+  width: 12px;
+  border-color: rgba(0,0,0,.38);
+    box-sizing: border-box;
+    height: 100%;
+    border-top: 1px solid;
+}

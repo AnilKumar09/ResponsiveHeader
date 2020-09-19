@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="ui blue inverted menu" style="border-radius: 0px !important;">
+    <a class="active item" (click)="OpenModel()">
+      <i class="large bars thick icon"></i>
+    </a>
+    <a class="active item" (click)="OpenModel()">
+      Home
+    </a>
+    <app-search-box class="flex-fill overflow-hidden"> </app-search-box>
+    <a class="right item" style="border: 0px !important;">
+      Friends
+    </a>
+  </div>
+  <div>
+    <div class="ui top attached demo menu">
+      <a class="item" (click)="sidebar.toggle()">
+          <i class="sidebar icon"></i> Menu
+      </a>
+  </div>
+  <fui-sidebar-container class="ui bottom attached segment">
+      <fui-sidebar class="ui sidebar inverted vertical menu" [class.visible]="isVisibleSideBar"   #sidebar>
+          <a class="item">Research</a>
+          <a class="item">Trading</a>
+      </fui-sidebar>
+      <fui-sidebar-sibling [isDimmedWhenVisible]="false">
+          <div class="ui basic segment">
+              <h3 class="ui header">Content</h3>
+              <p>Example content beside the sidebar</p>
+              <button class="ui button" (click)="isVisibleSideBar=!isVisibleSideBar">Open Sidebar</button>
+          </div>
+      </fui-sidebar-sibling>
+  </fui-sidebar-container>
+
+  </div>
+
+
+
+
+
+
+
+
+  <div
+    class="ui dimmer modals page transition"
+    [ngClass]="isVisible === true ? 'visible active' : 'hidden'"
+    style="display: flex !important;"
+  >
+    <div
+      class="ui mini test modal front transition"
+      style="display: block !important;"
+      [ngClass]="isVisible === true ? 'visible active' : 'hidden'"
+    >
+      <div class="header">
+        Delete Your Account
+      </div>
+      <div class="content">
+        <p>Are you sure you want to delete your account</p>
+      </div>
+      <div class="actions">
+        <div class="ui negative button" (click)="closeModal()">
+          Cancel
+        </div>
+        <div
+          class="ui positive right labeled icon button"
+          (click)="closeModal()"
+        >
+          Submit
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
